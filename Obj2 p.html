@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+<h1 class="text-center bg-success text-white p-2 mt-5 w-50 m-auto"> Print Objet In Order List Dynamically</h1>
+
+
+<ol class="list-group list-group-numbered w-25 m-auto mt-4" id="olData">
+
+  </ol>
+
+
+
+
+
+
+<script>
+
+const person={
+    Name:"Sherry",
+    Age:22,
+    City:"Lahore",
+    Country:"Pakistan",
+    RollNO:021,
+}
+
+
+let olData=document.getElementById("olData");
+
+for (const key in person) {
+    if (Object.hasOwnProperty.call(person, key)) {
+        const element = person[key];
+        olData.innerHTML +=`  \
+        <li class="list-group-item list-group-item-action ">${element}</li>\
+        `;
+    }
+}
+// olData.innerHTML=`
+
+// <li class="list-group-item">${person.Name}</li>
+// <li class="list-group-item">${person.Age}</li>
+// <li class="list-group-item">${person.City}</li>
+// <li class="list-group-item">${person.Country}</li>
+// <li class="list-group-item">${person.RollNO}</li>
+
+// `
+const person1 = {
+
+  firstName: "John",
+  lastName : "Doe",
+  id     : 5566,
+  fullName : function() {
+    return "bheega bheega ha" + "samaa " + this.lastName;
+  }
+};
+
+delete person1.id;
+document.getElementById("demo").innerHTML = person1.fullName();
+
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

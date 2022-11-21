@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables in js</title>
+  </head>
+  <body>
+    <h1>what are variables?</h1>
+    <h3>
+      variables are containers that stores values or variables are the named
+      memory locations
+    </h3>
+    <h4>Example</h4>
+    <div id="demo"></div>
+    <script>
+      var x = 55;
+
+      console.log( typeof x);
+     var a = 10;
+
+      console.log(a);
+      let y = document.getElementById("demo");
+      y.innerHTML = x
+      console.log( typeof y.innerHTML );
+      y.innerHTML += "<br>"+a;
+        /*
+            y.innerHTML = y.innerHTML + a;
+        */
+    </script>
+  </body>
+</html>
